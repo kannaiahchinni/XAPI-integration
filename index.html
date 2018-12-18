@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/googlemap.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-app="xapi-module">
+
+<div class=" container " ng-controller="xapiController as c">
+    <div class="wrapper wrapper-row ">
+        <input type="text" ng-model="c.user.firstName" class="form-control col-md-4 col-xs-12" placeholder="First Name"/>
+        <input type="text" ng-model="c.user.lastName" class="form-control col-md-4 col-xs-12" placeholder="Last Name"/>
+        <input type="email" ng-model="c.user.email" class="form-control col-md-4 col-xs-12" placeholder="Email"/>
+    </div>
+
+    <div class="wrapper wrapper-row">
+        <!-- to show advanced filter to user -->
+        <div class="side-nav">
+            <h1> Learning locker </h1>
+            <button ng-click="c.send('ll')" class="btn btn-primary"> Send Data</button>
+        </div>
+        <!-- show google map and calendar view to user -->
+        <div class="content-div">
+            <h1> Scorm LRS Demo</h1>
+            <button ng-click="c.send('sc')" class="btn btn-info"> Send Data</button>
+        </div>
+        <!-- results when map is shown -->
+        <div class="result-nav">
+            <h1> Watershed LRS </h1>
+            <button ng-click="c.send('wa')" class="btn btn-danger"> Send Data</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.min.js"></script>
+<script src="lib/tincan-min.js"></script>
+<script src="js/tincan.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/googlemap.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>

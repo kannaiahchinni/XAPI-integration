@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px;
+    padding-top: 10px;
+}
+.wrapper-row {
+    flex-direction:row;
+}
+
+.wrapper-column {
+    flex-direction: column;
+}
+
+
+.btn {
+
+    font-size:15px;
+    display: inline-block;
+}
+
+input {
+    margin:2px;
+}
